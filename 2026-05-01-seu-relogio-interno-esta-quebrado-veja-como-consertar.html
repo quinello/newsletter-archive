@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Relógio Interno Está Quebrado — Veja Como Consertar</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f0f0f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ── */
+    .wrapper { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* ── Header ── */
+    .header {
+      background: #1a1a2e;
+      border-radius: 12px 12px 0 0;
+      padding: 44px 48px 36px;
+    }
+    .header-label {
+      font-size: 11px;
+      color: #e94560;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 32px;
+      color: #ffffff;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Body card ── */
+    .body-card {
+      background: #ffffff;
+      padding: 48px 48px 40px;
+    }
+
+    /* ── Hook ── */
+    .hook {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #1a1a2e;
+      margin-bottom: 36px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 36px;
+    }
+    .divider-accent { width: 48px; height: 3px; background: #e94560; flex-shrink: 0; }
+    .divider-line { flex: 1; height: 1px; background: #e8e8f0; }
+
+    /* ── Insights ── */
+    .insight { margin-bottom: 36px; }
+    .insight h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: #1a1a2e;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .insight p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #3d3d4e;
+    }
+
+    /* ── Infographic ── */
+    .infographic-section { margin: 40px 0; }
+    .section-label {
+      font-size: 11px;
+      color: #e94560;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .infographic-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #e8e8f0;
+      display: block;
+    }
+
+    /* ── Data callout ── */
+    .data-callout {
+      border-left: 4px solid #e94560;
+      background: #f8f9fa;
+      padding: 24px 28px;
+      margin: 36px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .data-callout .section-label { margin-bottom: 16px; }
+    .data-point {
+      font-size: 14px;
+      color: #3d3d4e;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .data-point:last-child { margin-bottom: 0; }
+    .data-point strong { color: #1a1a2e; }
+
+    /* ── Takeaway ── */
+    .takeaway {
+      background: #1a1a2e;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .takeaway .section-label { color: #e94560; margin-bottom: 12px; }
+    .takeaway p { font-size: 16px; color: #e0e0f0; line-height: 1.8; }
+
+    /* ── CTA ── */
+    .cta-section { margin-top: 36px; }
+    .cta-section p { font-size: 15px; color: #3d3d4e; line-height: 1.7; margin-bottom: 20px; }
+    .cta-button {
+      display: inline-block;
+      background: #e94560;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      transition: background 0.2s;
+    }
+    .cta-button:hover { background: #c73450; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #f8f9fa;
+      border-top: 1px solid #e8e8f0;
+      padding: 24px 48px;
+      border-radius: 0 0 12px 12px;
+    }
+    .footer-label {
+      font-size: 11px;
+      color: #9098a0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .sources-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 16px;
+    }
+    .sources-list a {
+      font-size: 12px;
+      color: #9098a0;
+      text-decoration: underline;
+    }
+    .sources-list a:hover { color: #e94560; }
+
+    @media (max-width: 600px) {
+      .header, .body-card, .footer { padding-left: 24px; padding-right: 24px; }
+      .header h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <p class="header-label">Newsletter</p>
+      <h1>Seu Relógio Interno Está Quebrado — Veja Como Consertar</h1>
+    </header>
+
+    <!-- Body -->
+    <main class="body-card">
+
+      <!-- Hook -->
+      <p class="hook">Imagine que o seu corpo tem um relógio interno — sofisticado, preciso, ajustado por milhões de anos de evolução. Agora imagine que alguém jogou esse relógio no chão, pisou em cima e foi embora. É exatamente isso que a rotina caótica da maternidade faz com o seu ciclo circadiano. A boa notícia: com alguns ajustes estratégicos, você consegue recalibrar esse relógio — mesmo com uma criança pequena em casa.</p>
+
+      <!-- Divider -->
+      <div class="divider">
+        <div class="divider-accent"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- Insights -->
+      
+      <div class="insight">
+        <h2>O Que é o Ciclo Circadiano e Por Que Ele Importa Para Você</h2>
+        <p>O ciclo circadiano é um ritmo biológico de aproximadamente 24 horas coordenado por uma pequena estrutura no cérebro chamada núcleo supraquiasmático. Ele regula temperatura corporal, produção de hormônios como melatonina e cortisol, sono e vigília. Pense nele como o maestro de uma orquestra: quando ele está em sincronia, tudo flui. Quando ele desafina, o caos se instala.
+
+Quando esse ritmo é desregulado — o que acontece com frequência na maternidade, entre noites interrompidas, mamadas e demandas sem fim — as consequências vão muito além do cansaço. Estudos apontam que a desregulação circadiana está associada a depressão, ansiedade, problemas de memória e até risco aumentado de doenças crônicas como diabetes e obesidade.
+
+O gatilho mais poderoso para sincronizar esse relógio é simples e gratuito: a luz solar pela manhã. A exposição à luz natural ativa receptores nos olhos que sinalizam ao cérebro que é hora de despertar e iniciar as funções do dia. Então, mesmo que você tenha dormido mal, abrir as janelas ou dar uma caminhada curta logo cedo pode ser o primeiro passo para reconectar seu corpo ao ritmo natural da vida.</p>
+      </div>
+      
+      <div class="insight">
+        <h2>A Rotina que Ninguém Te Contou: Sincronize Seu Sono com o do Seu Filho</h2>
+        <p>Uma das estratégias mais contraintuitivas — e mais eficazes — para mães é observar os padrões de sono do filho e construir a própria rotina em torno deles. Se você perceber que seu bebê sempre cochila por volta das 14h durante 45 minutos, esse é o seu sinal para também se deitar. Dormir nos mesmos horários que seu filho não é preguiça — é uma decisão estratégica de saúde.
+
+Além disso, especialistas reforçam que a qualidade dos cochilos do seu bebê influencia diretamente a flexibilidade da sua rotina noturna. Quanto melhor ele dorme de dia, mais tarde pode ser o horário de dormir à noite — o que te dá margem para adaptar a rotina à realidade de uma mãe que trabalha. Criar um ambiente propício ao descanso do bebê (quarto escuro, temperatura em torno de 18°C, som ambiente calmo) é investir no seu próprio sono também.
+
+Um aviso importante: consistência é a palavra-chave. Ir para a cama em horários muito diferentes de uma noite para outra desequilibra o ciclo circadiano tanto quanto não dormir. O corpo aprende com a repetição — e uma rotina previsível reduz a ansiedade, para você e para seu filho.</p>
+      </div>
+      
+      <div class="insight">
+        <h2>Três Alavancas Práticas: Movimento, Ritual e Delegação</h2>
+        <p>Exercício diário — mesmo que seja uma caminhada curta com o carrinho de bebê — tem impacto comprovado na qualidade do sono. A atividade física reduz cortisol (o hormônio do estresse), libera endorfinas e ajuda o corpo a sentir a diferença entre dia e noite. Não precisa ser academia: brincar no parque com as crianças conta como movimento.
+
+Criar um ritual noturno de desaceleração é igualmente poderoso. Escolha algo que funcione para você — leitura, respiração lenta (a técnica 4-7-8 é simples: inspire por 4 segundos, segure por 7, expire por 8), chá de camomila ou erva-cidreira, meditação guiada de 5 minutos. O objetivo é mandar um sinal claro para o seu sistema nervoso: 'o trabalho acabou, é hora de descansar'. Evite telas com luz azul, alimentos gordurosos e cafeína nas horas antes de dormir.
+
+Por fim, a estratégia mais subestimada: delegar. Dividir as tarefas noturnas com o parceiro ou parceira — ninar o bebê após a amamentação, trocar fraldas — não é pedir favor, é manutenção básica da sua saúde. Uma mãe descansada cuida melhor, pensa melhor e vive melhor. E para as tarefas do dia a dia, experimente a 'regra dos três': defina apenas três prioridades diárias (uma para você, uma para os filhos, uma para o trabalho) e vá para a cama sabendo que fez o essencial.</p>
+      </div>
+      
+
+      
+      <!-- Infographic -->
+      <div class="infographic-section">
+        <p class="section-label">By the Numbers</p>
+        <img src="assets/2026-05-01-seu-relogio-interno-esta-quebrado-veja-como-consertar.png" alt="Key statistics chart for Seu Relógio Interno Está Quebrado — Veja Como Consertar">
+      </div>
+      
+
+      <!-- Data callout (text version, always shown) -->
+      <div class="data-callout">
+        <p class="section-label">Key Numbers</p>
+        
+        <p class="data-point">
+          <strong>18,3°C — Temperatura Ideal do Quarto:</strong> Manter o quarto nessa temperatura favorece o adormecimento e a qualidade do sono tanto para mães quanto para bebês.
+        </p>
+        
+        <p class="data-point">
+          <strong>4-7-8 — Técnica de Respiração:</strong> Inspirar por 4s, segurar por 7s e expirar por 8s ativa o sistema nervoso parassimpático, preparando o corpo para o sono em minutos.
+        </p>
+        
+        <p class="data-point">
+          <strong>3 prioridades — Tarefas Diárias Ideais:</strong> Limitar as metas do dia a três itens essenciais reduz significativamente a ansiedade noturna e melhora a qualidade do sono.
+        </p>
+        
+      </div>
+
+      <!-- Takeaway -->
+      <div class="takeaway">
+        <p class="section-label">The Takeaway</p>
+        <p>O seu corpo não é uma máquina que pode ignorar sinais de exaustão indefinidamente — ele tem um relógio biológico que precisa de consistência, luz e descanso para funcionar. Regularizar o ciclo circadiano não exige perfeição nem grandes mudanças de uma vez: começa com pequenos gestos repetidos todo dia, como abrir as janelas pela manhã, criar um ritual noturno e aceitar ajuda. Cuidar do seu sono não é um luxo — é o alicerce de tudo mais que você faz.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <p>Escolha uma das estratégias desta newsletter e aplique hoje à noite — não amanhã, hoje.</p>
+        <a href="#" class="cta-button">Comece pelo seu ritual noturno</a>
+      </div>
+
+    </main>
+
+    <!-- Footer / Sources -->
+    <footer class="footer">
+      <p class="footer-label">Sources</p>
+      <ul class="sources-list">
+        
+        <li><a href="https://www.mothermag.com/sleep-tips-for-busy-moms/" target="_blank" rel="noopener">10 Sleep Tips for Busy Moms - With Yogasleep</a></li>
+        
+        <li><a href="https://www.noomana.com.br/conteudos/privacao-do-sono-na-maternidade/" target="_blank" rel="noopener">Como lidar com a privação do sono na maternidade? - noomana</a></li>
+        
+        <li><a href="https://alemdapsiquiatria.com/ciclo-circadiano-luz-alimentacao-exercicio-psiquiatra-em-bh/" target="_blank" rel="noopener">Como Regular o Ciclo Circadiano: Luz, Alimentação e Exercício</a></li>
+        
+        <li><a href="https://www.tuasaude.com/ciclo-circadino/" target="_blank" rel="noopener">Ciclo circadiano: o que é, como funciona (e como regular) - Tua Saúde</a></li>
+        
+        <li><a href="https://www.metropoles.com/saude/confira-6-dicas-uteis-para-maes-dormirem-melhor" target="_blank" rel="noopener">Confira 6 dicas úteis para mães dormirem melhor - Metrópoles</a></li>
+        
+        <li><a href="https://vocesa.abril.com.br/coluna/camila-antunes/como-gerenciar-o-tempo-entre-filhos-e-carreira-para-vida-nao-ser-exaustiva/" target="_blank" rel="noopener">Como gerenciar o tempo entre filhos e carreira - VOCÊ S/A</a></li>
+        
+        <li><a href="https://lizandroo.com/blogs/news/how-to-sleep-train-a-baby-when-you-re-a-working-mom" target="_blank" rel="noopener">How to Sleep-Train a Baby When You're a Working Mom – Liz and Roo</a></li>
+        
+      </ul>
+    </footer>
+
+  </div>
+</body>
+</html>
